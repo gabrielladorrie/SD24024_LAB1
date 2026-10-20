@@ -7,7 +7,7 @@
 I use the following command in the VS Code terminal to run my Streamlit application:
 py -m streamlit run "C:\Users\gabbe\OneDrive\Desktop\BSD3513 INTRODUCTION TO ARTIFICIAL INTELLIGENCE\Trials\SD24024_LAB1.py"
 
-## Live Demo[
+## Live Demo
 https://sd24024lab1-9avancmzqvr3xlcvmrldaf.streamlit.app/
 
 ## Description
