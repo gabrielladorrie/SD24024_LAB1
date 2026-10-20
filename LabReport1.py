@@ -42,16 +42,28 @@ def search(graph, start, goal=None, method='BFS'):
 
     while frontier:
         node = frontier.popleft() if method == 'BFS' else frontier.pop()
+
+        # DFS can pop a node that was already expanded; skip it
+        if node in order:
+            continue
         order.append(node)
 
         if node != goal:
-            neighbors = graph[node] if method == 'BFS' else list(reversed(graph[node]))
-            for neighbor in neighbors:
-                if neighbor not in discovered:
-                    discovered.add(neighbor)
-                    parent[neighbor] = node
-                    depth[neighbor] = depth[node] + 1
-                    frontier.append(neighbor)
+            if method == 'BFS':
+                for neighbor in graph[node]:
+                    if neighbor not in discovered:
+                        discovered.add(neighbor)
+                        parent[neighbor] = node
+                        depth[neighbor] = depth[node] + 1
+                        frontier.append(neighbor)
+            else:
+                # Push in reverse so the alphabetically first neighbour is popped first.
+                # Update parent/depth on every push, so the last push wins.
+                for neighbor in reversed(graph[node]):
+                    if neighbor not in order:
+                        parent[neighbor] = node
+                        depth[neighbor] = depth[node] + 1
+                        frontier.append(neighbor)
 
         trace.append({
             'step': len(order),
