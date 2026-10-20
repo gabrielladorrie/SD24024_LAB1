@@ -22,6 +22,18 @@ This Streamlit web app runs Breadth-First Search (BFS) and Depth-First Search (D
 - **BFS** uses a first-in, first-out queue and explores the graph level by level, so it finds the shortest path in terms of edges.
 - **DFS** uses a last-in, first-out stack and explores one branch as deep as possible before backtracking. Each node stores the parent and depth from the push that reached it, so the reported path is the one the search actually followed.
 
+## Screenshots
+
+**BFS result (start node A)**
+
+![BFS result](bfs.png)
+
+**DFS result (start node A)**
+
+The step trace shows G reached through H at depth 4, with parent H.
+
+![DFS result](dfs.png)
+
 ## Complexity
 
 Both algorithms run in O(V + E) time on an adjacency list. BFS uses O(V) space for its queue, and DFS uses O(V) space for its stack in the worst case.
