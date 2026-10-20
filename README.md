@@ -4,9 +4,11 @@
 **Student:** Gabriella Dorrie Anak Guri (SD24024), Section 02G
 **Institution:** Universiti Malaysia Pahang Al-Sultan Abdullah (UMPSA)
 
-## Live Demo
+I use the following command in the VS Code terminal to run my Streamlit application:
+py -m streamlit run "C:\Users\gabbe\OneDrive\Desktop\BSD3513 INTRODUCTION TO ARTIFICIAL INTELLIGENCE\Trials\SD24024_LAB1.py"
 
-https://labreport1-dxqnl4nl4tps2ci9u3dq2l.streamlit.app/
+## Live Demo[
+https://sd24024lab1-9avancmzqvr3xlcvmrldaf.streamlit.app/
 
 ## Description
 
